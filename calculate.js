@@ -15,7 +15,7 @@ function calculate(next){
 			for (let [key, value] of Object.entries(body.data.details_list)) 
 			{
 				var totalItem = value.info_card.order_list_cards[0].items.length;
-				
+
 				if(totalItem > 1)
 				{
 					var counter = 1;
@@ -31,6 +31,7 @@ function calculate(next){
 						}
 						else
 						{
+							order++;
 							console.log(order + ":", "Price RM " + itemPrice + " - ", value2.name + " Final Total Price : ");
 						}
 						counter++;
